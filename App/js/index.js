@@ -20,16 +20,18 @@ xui.Class('App', 'xui.Module',{
                 xui.create("xui.UI.Gallery")
                 .setHost(host,"xui_ui_gallery3")
                 .setDirtyMark(false)
-                .setItems([{
-                    "id":"a",
-                    "caption":"",
-                    "imageClass":"xui-icon-bullet"
-                },
-                {
-                    "id":"b",
-                    "caption":"",
-                    "imageClass":"xui-uicmd-opt"
-                }])
+                .setItems([
+                    {
+                        "id":"a",
+                        "caption":"",
+                        "imageClass":"xui-icon-bullet"
+                    },
+                    {
+                        "id":"b",
+                        "caption":"",
+                        "imageClass":"xui-uicmd-opt"
+                    }
+                ])
                 .setDock("bottom")
                 .setShowEffects("Blur")
                 .setWidth("auto")
@@ -39,54 +41,68 @@ xui.Class('App', 'xui.Module',{
                 .setItemPadding(8)
                 .setColumns(2)
                 .setValue("a")
-                .onItemSelected([{
-                    "desc":"page1",
-                    "type":"page",
-                    "target":"App.Address",
-                    "params":["{page.xui_ui_div17}"],
-                    "method":"show",
-                    "conditions":[{
-                        "left":"{args[1].id}",
-                        "symbol":"=",
-                        "right":"a"
-                    }]
-                },
-                {
-                    "desc":"page12",
-                    "type":"page",
-                    "target":"App.Setting",
-                    "params":[],
-                    "method":"hide",
-                    "conditions":[{
-                        "left":"{args[1].id}",
-                        "symbol":"=",
-                        "right":"a"
-                    }]
-                },
-                {
-                    "desc":"page2",
-                    "type":"page",
-                    "target":"App.Address",
-                    "params":[],
-                    "method":"hide",
-                    "conditions":[{
-                        "left":"{args[1].id}",
-                        "symbol":"=",
-                        "right":"b"
-                    }]
-                },
-                {
-                    "desc":"page22",
-                    "type":"page",
-                    "target":"App.Setting",
-                    "params":["{page.xui_ui_div17}"],
-                    "method":"show",
-                    "conditions":[{
-                        "left":"{args[1].id}",
-                        "symbol":"=",
-                        "right":"b"
-                    }]
-                }])
+                .onItemSelected([
+                    {
+                        "desc":"page1",
+                        "type":"page",
+                        "target":"App.Address",
+                        "params":[
+                            "{page.xui_ui_div17}"
+                        ],
+                        "method":"show",
+                        "conditions":[
+                            {
+                                "left":"{args[1].id}",
+                                "symbol":"=",
+                                "right":"a"
+                            }
+                        ]
+                    },
+                    {
+                        "desc":"page12",
+                        "type":"page",
+                        "target":"App.Setting",
+                        "params":[ ],
+                        "method":"hide",
+                        "conditions":[
+                            {
+                                "left":"{args[1].id}",
+                                "symbol":"=",
+                                "right":"a"
+                            }
+                        ]
+                    },
+                    {
+                        "desc":"page2",
+                        "type":"page",
+                        "target":"App.Address",
+                        "params":[ ],
+                        "method":"hide",
+                        "conditions":[
+                            {
+                                "left":"{args[1].id}",
+                                "symbol":"=",
+                                "right":"b"
+                            }
+                        ]
+                    },
+                    {
+                        "desc":"page22",
+                        "type":"page",
+                        "target":"App.Setting",
+                        "params":[
+                            "{page.xui_ui_div17}"
+                        ],
+                        "method":"show",
+                        "conditions":[
+                            {
+                                "left":"{args[1].id}",
+                                "symbol":"=",
+                                "right":"b"
+                            }
+                        ]
+                    }
+                ])
                 .setCustomStyle({
                     "ITEMS":{
                         "border-right":"0",
@@ -97,7 +113,15 @@ xui.Class('App', 'xui.Module',{
                         "border-radius":"0"
                     }
                 })
-                );
+            );
+            
+            host.xui_ui_div17.append(
+                xui.create("xui.UI.Image")
+                .setHost(host,"xui_ui_image4")
+                .setLeft("9.375em")
+                .setTop("6.875em")
+                .setSrc("{/}img/f2.png")
+            );
             
             return children;
             // ]]Code created by CrossUI RAD Studio
