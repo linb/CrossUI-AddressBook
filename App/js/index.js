@@ -115,14 +115,6 @@ xui.Class('App', 'xui.Module',{
                 })
             );
             
-            host.xui_ui_div17.append(
-                xui.create("xui.UI.Image")
-                .setHost(host,"xui_ui_image4")
-                .setLeft("9.375em")
-                .setTop("6.875em")
-                .setSrc("{/}img/f2.png")
-            );
-            
             return children;
             // ]]Code created by CrossUI RAD Studio
         },
