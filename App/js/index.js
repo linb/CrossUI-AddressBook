@@ -115,6 +115,32 @@ xui.Class('App', 'xui.Module',{
                 })
             );
             
+            host.xui_ui_div17.append(
+                xui.create("xui.UI.HTMLButton")
+                .setHost(host,"xui_ui_htmlbutton3")
+                .setLeft("8.75em")
+                .setTop("5.625em")
+                .setCaption("Native Button")
+                .onClick([
+                    {
+                        "desc":"Action 1",
+                        "type":"module",
+                        "target":"module_githubapisimple391",
+                        "args":[
+                            "{page.module_githubapisimple391.ensureGithubAuth}"
+                        ],
+                        "method":"$Functions.ensureGithubAuth",
+                        "redirection":"other:callback:call",
+                        "event":1
+                    }
+                ])
+            );
+            
+            append(
+                xui.create("Module.GitHubAPISimple39", "xui.Module")
+                .setHost(host,"module_githubapisimple391")
+            );
+            
             return children;
             // ]]Code created by CrossUI RAD Studio
         },
